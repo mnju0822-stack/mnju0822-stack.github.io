@@ -11,7 +11,14 @@ title: "소개"
 ## 이 사이트에 대하여
 
 이 사이트는 **인문데이터과학개론** 수업에서
-HTML, CSS, JavaScript, Jekyll을 배우며
+***HTML, CSS, JavaScript, Jekyll***을 배우며
 만들고 있습니다.
+
+## 관심 있는 분야 
+- 게임
+- 편집
+- 영문학
+
+[요즘 자주 듣는 노래](https://youtu.be/RRQ9n2gLs9s?si=FWXPicHfMfnW7_J9)
 
 <script src="/assets/js/hello.js"></script>
