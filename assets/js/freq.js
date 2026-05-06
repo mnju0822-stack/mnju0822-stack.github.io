@@ -12,7 +12,7 @@ const targets = ["이", "의", "날", "개", "소"];
 const counts = targets.map(t => countChar(text, t));
 console.log(counts);
 
-for ( let i =0; i<targets.length; i++ ) {
+for ( let i = 0; i < targets.length; i++ ) {
     console.log(`${targets[i]}: ${counts[i]}번`);
 }
 
@@ -24,5 +24,5 @@ for (let i = 1; i < counts.length; i++) {
     if (counts[i] > counts[maxIdx]) maxIdx = i;
 }  //일단 맨 앞에 있는 애가 지금까지는 1등이라고 가정하고, 0번부터 시작해서 쭉 보자. 
 
-const top = targets[maxIdx];
-console.log(`가장 자주 나온 글자: '${top}' (${counts[maxIdx]}번)`);
+const topTarget = targets[maxIdx];
+console.log(`가장 자주 나온 글자: '${topTarget}' (${counts[maxIdx]}번)`);
