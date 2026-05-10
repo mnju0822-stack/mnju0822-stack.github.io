@@ -79,5 +79,5 @@ for (let i = 1; i < counts.length; i++) {
         maxIdx = i;
     }
 }
-const top = targets[maxIdx];
-console.log(`가장 자주 나온 글자: '${top}' (${counts[maxIdx]}번)`);
+const best = targets[maxIdx];
+console.log(`가장 자주 나온 글자: '${best}' (${counts[maxIdx]}번)`);
