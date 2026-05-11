@@ -45,7 +45,7 @@ function countChar(text, target) {
             count++; 
         }
     }
-    return count; // 최종 횟수를 돌려줌
+    return count; // 
 }
 
 const cases = [
