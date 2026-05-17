@@ -3,14 +3,14 @@
 
 // Q1
 const themeBtn = document.querySelector("#theme-btn");
-const qlBox = document.querySelector("#ql-box");
+const q1Box = document.querySelector("#q1-box");
 
 themeBtn.addEventListener("click", toggleDark)
 
 function toggleDark() {
-    qlBox.classList.toggle("dark")
+    q1Box.classList.toggle("dark")
     
-    if (qlBox.classList.contains("dark")){ //검정 배경 됨 
+    if (q1Box.classList.contains("dark")){ //검정 배경 됨 
         themeBtn.textContent = "라이트모드"
     }else {
         themeBtn.textContent = "다크 모드" //dark 없을 때 
@@ -24,9 +24,7 @@ const input = document.querySelector("#q2-input")
 const count = document.querySelector("#q2-count")
 const warn = document.querySelector("#q2-warn")
 
-input.addEventListener("input", q2function);
-    
-function q2function() {
+input.addEventListener("input", (e) => {
     const lengthNow = e.target.value.length; 
     count.textContent = `현재 글자 수: ${lengthNow}자`;
 
@@ -35,5 +33,7 @@ function q2function() {
         warn.style.color = "crimson";
     } else {
         warn.textContent = "";
+        warn.style.color = "";
     }
-}
+} );
+    
