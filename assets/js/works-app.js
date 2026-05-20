@@ -17,15 +17,15 @@ fetch("/data/works.json")
     .then(response => response.json())
     .then(works => {
         for (const work of works) {
-            const btn = document.createElement("button");
-            btn.textContent = work.title;
-            btn.addEventListener("click", () => analyze(work));
-            btnBox.appendChild(btn);
+            const btn = document.createElement("button"); //버튼 새로 만듬. 그 안에 들어갈 글자 크기에 딱 맞게 기본 자동 생성됨 
+            btn.textContent = work.title;  //버튼에 제목 넣기 
+            btn.addEventListener("click", () => analyze(work)); //버튼 두르면 분석 함수 실행되게 설정
+            btnBox.appendChild(btn); // html 빈그릇 btnBox 에 버튼 하위로 집어넣기 
         }
     });
 
 function analyze(work) {
-    fetch(work.file)
+    fetch(work.file)  // 여기서 뭘 받아오는거지?? 
         .then(response => response.text())
         .then(text => {
             nowBox.textContent = `[${work.title}] 분석 결과`;
