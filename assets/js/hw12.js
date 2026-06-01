@@ -74,7 +74,6 @@ fetch("/data/nobel-literature.csv")
                 },
                 scales: {
                     y: {
-                        beginAtZero: true,
                         title: {
                             display: true,
                             text: "수상자 수"
@@ -82,8 +81,8 @@ fetch("/data/nobel-literature.csv")
                     },
                     x: {
                         title: {
-                            display: true,
-                            text: "연대"
+                        display: true,
+                        text: "연대"
                         }
                     }
                 }
