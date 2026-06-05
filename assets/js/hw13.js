@@ -18,7 +18,7 @@ function extractBody(text) {
 
 function getWords(text) {
     return text.toLowerCase()
-        .replace(/[.,!?;:"'()\[\]_]/g, " ") // 단어 사이의 구두점을 공백으로 치환
+        .replace(/[.,!?;:'"‘’“”()\[\]_*]/g, " ") // 단어 사이의 구두점을 공백으로 치환
         .split(/\s+/)                       // 공백 기준으로 나누기
         .filter(w => w.length > 0);
 }
@@ -69,9 +69,12 @@ Promise.all([
     fetch("/data/frankenstein.txt").then(r => r.text()),
     fetch("/data/dracula.txt").then(r => r.text()),
     fetch("/data/stopwords-en.txt").then(r => r.text()),
-]).then(([frankText, dracText, stopText]) => {
+    fetch("/data/stopwords-custom.txt").then(r => r.text()),
+]).then(([frankText, dracText, baseStop, customStop]) => {
     
-    const stopwords = stopText.split(/\s+/).filter(w => w.length > 0);
+    const stopwords = (baseStop + "\n" + customStop)
+        .split(/\s+/)
+        .filter(w => w.length > 0);
 
     function analyze(text, stopwords) {
         const body = extractBody(text);
