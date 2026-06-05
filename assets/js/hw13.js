@@ -17,9 +17,10 @@ function extractBody(text) {
 
 
 function getWords(text) {
-    return text.toLowerCase()
-        .replace(/[.,!?;:'"‘’“”()\[\]_*]/g, " ") // 단어 사이의 구두점을 공백으로 치환
-        .split(/\s+/)                       // 공백 기준으로 나누기
+    return text
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, " ")
+        .split(/\s+/)
         .filter(w => w.length > 0);
 }
 
