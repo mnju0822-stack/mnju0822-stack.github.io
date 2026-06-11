@@ -13,5 +13,6 @@ permalink: /compare/
         <div style="height: 500px;"><canvas id="chart-hound"></canvas></div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% include chartjs.html %}  // 순서 중요. 필요한 것들을 먼저 읽어야 다음 동작이 가능한 것들이 존재함 
+<script src="/assets/js/analysis.js"></script>
 <script src="/assets/js/compare.js"></script>
