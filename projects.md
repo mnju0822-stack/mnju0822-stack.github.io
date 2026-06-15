@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "프로젝트"
+permarlink: /projects/
 ---
 
 # 참여 프로젝트 목록

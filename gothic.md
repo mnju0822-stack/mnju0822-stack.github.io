@@ -1,7 +1,7 @@
 ---
 layout: page
 title: [숙제13] 텍스트 분석 도구 구현
-permalink: /hw13/
+permalink: /gothic/
 ---
 
 # [숙제13] 텍스트 분석 도구 구현
@@ -41,5 +41,6 @@ NLTK 기본 목록 외에 다음 N개의 단어를 "data/stopwords-custom.txt"�
 - **한 작품에만 도드라지는 단어** : Frankenstein에서는 miserable, death, father과 같은 단어가 도드라지는데, 이는 인간으로서의 존재론적 고뇌를 다루는 작품의 주제를 잘 반영하고 있다. 반면, Dracula는 Frankenstein과 비교했을 때 보다 역동적이고 외부의 사건이 전개의 중심이 되는 이야기인 듯 하다. came, go, took, went와 같은 동작 동사들이 많이 사용되었다. 
 
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="/assets/js/hw13.js"></script>
+{% include chartjs.html %}  // 순서 중요. 필요한 것들을 먼저 읽어야 다음 동작이 가능한 것들이 존재함 
+<script src="/assets/js/analysis.js"></script>
+<script src="/assets/js/gothic.js"></script>
